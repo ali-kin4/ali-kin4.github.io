@@ -22,6 +22,31 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"/>
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet"/>
+  <style>
+   .profile-image-fit {
+  max-width: 100%;
+  height: auto;
+}.profile-image-fit {
+  max-width: 50%;
+  height: auto;
+}
+.profile-image-fit {
+  max-width: 70%;
+  height: auto;
+  margin-left: 15%;
+}
+.image-container {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+}
+  </style>
  </head>
  <body>
   <!-- ======= Mobile nav toggle button ======= -->
@@ -139,12 +164,12 @@
   <main id="main">
    <!-- ======= About Section ======= -->
    <section class="about" id="about">
-    <div class="container">
+    <div class="container about-container">
      <div class="row">
-      <div class="col-lg-6">
-       <img alt="Ali Jabbary" class="img-fluid" src="assets/img/Ali_Jabbary.png"/>
+      <div class="col-lg-6 image-container">
+       <img alt="Ali Jabbary" class="profile-image-fit" src="assets/img/Ali_Jabbary.png"/>
       </div>
-      <div class="col-lg-6 pt-4 pt-lg-0 content">
+      <div class="col-lg-6 pt-4 pt-lg-0 content text-justify">
        <h3>
         Ali Jabbary | Senior Data Scientist &amp; Python Developer
        </h3>
