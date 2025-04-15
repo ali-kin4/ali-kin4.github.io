@@ -578,6 +578,8 @@
                         Kaggle.
                      </p>
                      <span class="price">From $60/hr</span>
+                     <!-- PayPal Button Container -->
+                     <!-- <div id="paypal-button-container-ml" style="margin-top: 1rem;"></div> -->
                   </div>
                </div>
                <div class="subject-card">
@@ -635,7 +637,7 @@
                </div>
                <div class="subject-card">
                   <img
-                     src="aassets/img/confidence_time_mgmt_ad_card.png"
+                     src="assets/img/confidence_time_mgmt_ad_card.png"
                      alt="Public speaking"
                      />
                   <div class="subject-content">
@@ -1138,6 +1140,37 @@
         }
       });
     </script>
+
+    <!-- PayPal SDK (Sandbox) -->
+<script src="https://www.paypal.com/sdk/js?client-id=AURY_UkGu2XQ_hCxiQm7xxymgSbllOfyWZfZteGSIiyIgq2vAcLA_BIs_znA4fNUA3PwO0DtyRJjuUSo&currency=USD"></script>
+
+<!-- Script to Render the Smart Button -->
+<script>
+  paypal.Buttons({
+    style: {
+      shape: 'pill',
+      color: 'blue',
+      layout: 'vertical',
+      label: 'paypal'
+    },
+    createOrder: function(data, actions) {
+      return actions.order.create({
+        purchase_units: [{
+          description: "1-on-1 Tutoring: Machine Learning & AI",
+          amount: {
+            value: '60.00'
+          }
+        }]
+      });
+    },
+    onApprove: function(data, actions) {
+      return actions.order.capture().then(function(details) {
+        alert('✅ Payment completed by ' + details.payer.name.given_name + '!');
+        // Optional redirect: window.location.href = "/thank-you.html";
+      });
+    }
+  }).render('#paypal-button-container-ml');
+</script>
 
 
    </body>
