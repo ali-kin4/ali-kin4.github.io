@@ -1,468 +1,1113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Basic SEO Meta Tags -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ali Jabbary | Premier Multidisciplinary Tutoring & Consulting</title>
-  <meta name="description" content="Future‑proof your career with Ali Jabbary – award‑winning data scientist, engineer & business strategist delivering elite 1‑on‑1 tutoring across STEM, finance and tech.">
-  <meta name="keywords" content="Ali Jabbary tutor, math tutoring, physics tutor, data science mentor, machine learning coach, python tutor, mechanical engineering help, finance tutoring, CAD tutor, ANSYS, SolidWorks, LLM, AutoCAD, accounting tutor, algebra tutor">
-  <link rel="canonical" href="https://yourgithubusername.github.io/">
-  <!-- Open Graph -->
-  <meta property="og:title" content="Ali Jabbary | Premier Multidisciplinary Tutoring & Consulting">
-  <meta property="og:description" content="Hands‑on 1‑on‑1 guidance in Math, Engineering, AI, Finance & more. Book your free strategy call today!">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80">
-  <meta property="og:url" content="https://yourgithubusername.github.io/">
-  <meta property="og:type" content="website">
-  <!-- Fonts & Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-pb6qQyK5EzB4MZC8BvA/6vNJMkRJ8N6gXl7B+9i1kqdR6Y+uhQevFWFe16T9DzF1zJo1Ge3+Rl4rX9xkTx6Npg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-  <!-- Styles -->
-  <style>
-    :root{
-      --primary:#2563EB;      /* blue */
-      --secondary:#F97316;    /* orange */
-      --dark:#0F172A;
-      --light:#F8FAFC;
-      --muted:#64748B;
-      --radius:.9rem;
-      --transition:.25s ease;
-    }
-    *{box-sizing:border-box;margin:0;padding:0;}
-    html{scroll-behavior:smooth;}
-    body{font-family:'Inter',sans-serif;background:var(--light);color:var(--dark);line-height:1.7;}
-    img{max-width:100%;display:block;}
-    a{text-decoration:none;color:inherit;}
+  <head>
+    <!-- Basic SEO Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ali Jabbary | Premier Multidisciplinary Tutoring & Consulting</title>
+    <meta
+      name="description"
+      content="Future‑proof your career with Ali Jabbary – award‑winning data scientist, engineer & business strategist delivering elite 1‑on‑1 tutoring across STEM, finance and tech."
+    />
+    <meta
+      name="keywords"
+      content="Ali Jabbary tutor, math tutoring, physics tutor, data science mentor, machine learning coach, python tutor, mechanical engineering help, finance tutoring, CAD tutor, ANSYS, SolidWorks, LLM, AutoCAD, accounting tutor, algebra tutor"
+    />
+    <link rel="canonical" href="https://yourgithubusername.github.io/" />
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Ali Jabbary | Premier Multidisciplinary Tutoring & Consulting"
+    />
+    <meta
+      property="og:description"
+      content="Hands‑on 1‑on‑1 guidance in Math, Engineering, AI, Finance & more. Book your free strategy call today!"
+    />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
+    />
+    <meta property="og:url" content="https://yourgithubusername.github.io/" />
+    <meta property="og:type" content="website" />
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-pb6qQyK5EzB4MZC8BvA/6vNJMkRJ8N6gXl7B+9i1kqdR6Y+uhQevFWFe16T9DzF1zJo1Ge3+Rl4rX9xkTx6Npg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Styles -->
+    <style>
+      :root {
+        --primary: #2563eb; /* blue */
+        --secondary: #f97316; /* orange */
+        --dark: #0f172a;
+        --light: #f8fafc;
+        --muted: #64748b;
+        --radius: 0.9rem;
+        --transition: 0.25s ease;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background: var(--light);
+        color: var(--dark);
+        line-height: 1.7;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
 
-    /* Layout */
-    section{padding:4rem 2rem;max-width:1100px;margin-inline:auto;position:relative;}
-    h2.section-title{text-align:center;font-size:2rem;margin-bottom:3rem;font-weight:800;position:relative;display:inline-block;}
-    h2.section-title::after{content:"";width:60%;height:4px;background:var(--secondary);position:absolute;left:20%;bottom:-10px;border-radius:2px;}
+      /* Layout */
+      section {
+        padding: 4rem 2rem;
+        max-width: 1100px;
+        margin-inline: auto;
+        position: relative;
+      }
+      h2.section-title {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 3rem;
+        font-weight: 800;
+        position: relative;
+        display: inline-block;
+      }
+      h2.section-title::after {
+        content: '';
+        width: 60%;
+        height: 4px;
+        background: var(--secondary);
+        position: absolute;
+        left: 20%;
+        bottom: -10px;
+        border-radius: 2px;
+      }
 
-    /* Header */
-    header{position:sticky;top:0;z-index:999;background:#fff;padding:.8rem 2rem;box-shadow:0 2px 6px rgba(0,0,0,.05);display:flex;align-items:center;justify-content:space-between;}
-    .logo{font-weight:800;font-size:1.25rem;color:var(--primary);}    
-    nav a{margin-left:1.25rem;font-weight:600;color:var(--dark);transition:color var(--transition);}    
-    nav a:hover{color:var(--primary);}    
+      /* Header */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        background: #fff;
+        padding: 0.8rem 2rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo {
+        font-weight: 800;
+        font-size: 1.25rem;
+        color: var(--primary);
+      }
+      nav a {
+        margin-left: 1.25rem;
+        font-weight: 600;
+        color: var(--dark);
+        transition: color var(--transition);
+      }
+      nav a:hover {
+        color: var(--primary);
+      }
 
-    .btn{display:inline-block;background:var(--primary);color:#fff;padding:.75rem 1.75rem;border-radius:var(--radius);font-weight:700;transition:transform var(--transition),box-shadow var(--transition);}    
-    .btn:hover{transform:translateY(-3px);box-shadow:0 8px 16px rgba(37,99,235,.25);}    
+      .btn {
+        display: inline-block;
+        background: var(--primary);
+        color: #fff;
+        padding: 0.75rem 1.75rem;
+        border-radius: var(--radius);
+        font-weight: 700;
+        transition: transform var(--transition), box-shadow var(--transition);
+      }
+      .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 16px rgba(37, 99, 235, 0.25);
+      }
 
-    /* Hero */
-    .hero{background:linear-gradient(135deg,var(--primary) 0%,#1e40af 100%);color:#fff;text-align:center;padding:6rem 1rem 5rem;position:relative;overflow:hidden;}
-    .hero h1{font-size:clamp(2.5rem,5vw,3.6rem);margin-bottom:1rem;font-weight:800;line-height:1.2;max-width:900px;margin-inline:auto;}
-    .hero p{font-size:1.25rem;margin-bottom:2.5rem;max-width:700px;margin-inline:auto;color:#e2e8f0;}
-    .shape{position:absolute;border-radius:50%;filter:blur(90px);opacity:.25;}
-    .shape.one{width:300px;height:300px;background:var(--secondary);top:-80px;left:-80px;}
-    .shape.two{width:260px;height:260px;background:#9333ea;bottom:-100px;right:-100px;}
+      /* Hero */
+      .hero {
+        background: linear-gradient(135deg, var(--primary) 0%, #1e40af 100%);
+        color: #fff;
+        text-align: center;
+        padding: 6rem 1rem 5rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero h1 {
+        font-size: clamp(2.5rem, 5vw, 3.6rem);
+        margin-bottom: 1rem;
+        font-weight: 800;
+        line-height: 1.2;
+        max-width: 900px;
+        margin-inline: auto;
+      }
+      .hero p {
+        font-size: 1.25rem;
+        margin-bottom: 2.5rem;
+        max-width: 700px;
+        margin-inline: auto;
+        color: #e2e8f0;
+      }
+      .shape {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(90px);
+        opacity: 0.25;
+      }
+      .shape.one {
+        width: 300px;
+        height: 300px;
+        background: var(--secondary);
+        top: -80px;
+        left: -80px;
+      }
+      .shape.two {
+        width: 260px;
+        height: 260px;
+        background: #9333ea;
+        bottom: -100px;
+        right: -100px;
+      }
 
-    /* Subject Slider */
-    .subjects-slider-wrapper{position:relative;}
-    .subjects-slider{display:flex;gap:2rem;overflow:hidden;scroll-behavior:smooth;scroll-snap-type:x mandatory;padding-bottom:1rem;}
-    .subject-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.06);transition:transform var(--transition),box-shadow var(--transition);min-width:260px;flex:0 0 260px;scroll-snap-align:start;}
-    .subject-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px rgba(0,0,0,.08);}    
-    .subject-card img{height:170px;object-fit:cover;width:100%;}
-    .subject-content{padding:1.25rem;}
-    .subject-content h3{margin-bottom:.5rem;font-size:1.125rem;font-weight:700;color:var(--primary);}    
-    .subject-content p{font-size:.95rem;color:var(--muted);margin-bottom:1rem;}
-    .price{font-weight:700;color:var(--secondary);}    
+      /* Subject Slider */
+      .subjects-slider-wrapper {
+        position: relative;
+      }
+      .subjects-slider {
+        display: flex;
+        gap: 2rem;
+        overflow: hidden;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 1rem;
+      }
+      .subject-card {
+        background: #fff;
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+        transition: transform var(--transition), box-shadow var(--transition);
+        min-width: 260px;
+        flex: 0 0 260px;
+        scroll-snap-align: start;
+      }
+      .subject-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      }
+      .subject-card img {
+        height: 170px;
+        object-fit: cover;
+        width: 100%;
+      }
+      .subject-content {
+        padding: 1.25rem;
+      }
+      .subject-content h3 {
+        margin-bottom: 0.5rem;
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: var(--primary);
+      }
+      .subject-content p {
+        font-size: 0.95rem;
+        color: var(--muted);
+        margin-bottom: 1rem;
+      }
+      .price {
+        font-weight: 700;
+        color: var(--secondary);
+      }
 
-    .slider-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.9);border:none;border-radius:50%;width:48px;height:48px;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.1);transition:background var(--transition);}    
-    .slider-btn:hover{background:#fff;}
-    .slider-btn svg{width:20px;height:20px;stroke:var(--primary);}
-    .slider-btn.prev{left:-24px;}
-    .slider-btn.next{right:-24px;}
+      .slider-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.9);
+        border: none;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: background var(--transition);
+      }
+      .slider-btn:hover {
+        background: #fff;
+      }
+      .slider-btn svg {
+        width: 20px;
+        height: 20px;
+        stroke: var(--primary);
+      }
+      .slider-btn.prev {
+        left: -24px;
+      }
+      .slider-btn.next {
+        right: -24px;
+      }
 
-    /* About */
-    .about-wrapper{display:flex;flex-wrap:wrap;gap:2rem;align-items:center;}
-    .about-text{flex:1 1 350px;}
-    .about-img{flex:1 1 300px;border-radius:var(--radius);box-shadow:0 4px 12px rgba(0,0,0,.08);overflow:hidden;}
-    .about-text ul{margin-left:1rem;list-style:disc;}
+      /* About */
+      .about-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        align-items: center;
+      }
+      .about-text {
+        flex: 1 1 350px;
+      }
+      .about-img {
+        flex: 1 1 300px;
+        border-radius: var(--radius);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+      }
+      .about-text ul {
+        margin-left: 1rem;
+        list-style: disc;
+      }
 
-    /* Methodology */
-    .steps{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));text-align:center;}
-    .step{background:#fff;padding:2rem;border-radius:var(--radius);box-shadow:0 4px 12px rgba(0,0,0,.05);transition:transform var(--transition);}    
-    .step:hover{transform:translateY(-4px);}    
-    .step i{font-size:2rem;color:var(--primary);margin-bottom:.75rem;}
+      /* Methodology */
+      .steps {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        text-align: center;
+      }
+      .step {
+        background: #fff;
+        padding: 2rem;
+        border-radius: var(--radius);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        transition: transform var(--transition);
+      }
+      .step:hover {
+        transform: translateY(-4px);
+      }
+      .step i {
+        font-size: 2rem;
+        color: var(--primary);
+        margin-bottom: 0.75rem;
+      }
 
-    /* Certifications */
-    .cert-grid{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));justify-items:center;}
-    .cert-grid img{height:60px;width:auto;filter:grayscale(1);transition:filter var(--transition);}    
-    .cert-grid img:hover{filter:none;}
+      /* Certifications */
+      .cert-grid {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        justify-items: center;
+      }
+      .cert-grid img {
+        height: 60px;
+        width: auto;
+        filter: grayscale(1);
+        transition: filter var(--transition);
+      }
+      .cert-grid img:hover {
+        filter: none;
+      }
 
-    /* Resources */
-    .resource-grid{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
-    .resource-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,.05);transition:transform var(--transition);}    
-    .resource-card:hover{transform:translateY(-6px);}    
-    .resource-card img{height:140px;object-fit:cover;width:100%;}
-    .resource-card div{padding:1.25rem;}
-    .resource-card h4{margin-bottom:.5rem;color:var(--primary);font-size:1.1rem;}
+      /* Resources */
+      .resource-grid {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      }
+      .resource-card {
+        background: #fff;
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        transition: transform var(--transition);
+      }
+      .resource-card:hover {
+        transform: translateY(-6px);
+      }
+      .resource-card img {
+        height: 140px;
+        object-fit: cover;
+        width: 100%;
+      }
+      .resource-card div {
+        padding: 1.25rem;
+      }
+      .resource-card h4 {
+        margin-bottom: 0.5rem;
+        color: var(--primary);
+        font-size: 1.1rem;
+      }
 
-    /* Testimonials */
-    .testimonial{background:#fff;padding:2rem;border-left:5px solid var(--primary);border-radius:var(--radius);margin-bottom:2rem;box-shadow:0 4px 10px rgba(0,0,0,.04);}    
-    .testimonial-author{margin-top:.75rem;font-weight:700;color:var(--dark);}    
+      /* Testimonials */
+      .testimonial {
+        background: #fff;
+        padding: 2rem;
+        border-left: 5px solid var(--primary);
+        border-radius: var(--radius);
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+      }
+      .testimonial-author {
+        margin-top: 0.75rem;
+        font-weight: 700;
+        color: var(--dark);
+      }
 
-    /* FAQ */
-    details{background:#fff;border-radius:var(--radius);padding:1.25rem;margin-bottom:1rem;box-shadow:0 2px 8px rgba(0,0,0,.05);}    
-    summary{cursor:pointer;font-weight:600;color:var(--primary);}    
+      /* FAQ */
+      details {
+        background: #fff;
+        border-radius: var(--radius);
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+      summary {
+        cursor: pointer;
+        font-weight: 600;
+        color: var(--primary);
+      }
 
-    /* Contact */
-    form{display:grid;gap:1rem;max-width:600px;margin:auto;}
-    input,textarea{padding:.8rem 1rem;border:1px solid #cbd5e1;border-radius:var(--radius);font-size:1rem;width:100%;}
-    textarea{resize:vertical;}
+      /* Contact */
+      form {
+        display: grid;
+        gap: 1rem;
+        max-width: 600px;
+        margin: auto;
+      }
+      input,
+      textarea {
+        padding: 0.8rem 1rem;
+        border: 1px solid #cbd5e1;
+        border-radius: var(--radius);
+        font-size: 1rem;
+        width: 100%;
+      }
+      textarea {
+        resize: vertical;
+      }
 
-    /* Payment Section */
-    #payment{background:linear-gradient(135deg,#f8fafc 0%,#e0f2fe 100%);}    
-    .pay-wrapper{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:2rem;}
-    .pay-card{position:relative;background:#fff;padding:2.5rem 2rem 3rem;border-radius:calc(var(--radius)*1.2);box-shadow:0 10px 25px rgba(0,0,0,.08),0 0 0 4px #fff,0 0 0 6px #0070ba40;max-width:420px;width:100%;transition:transform .45s var(--transition),box-shadow .45s var(--transition);transform-style:preserve-3d;text-align:center;}
-    .pay-card:hover{transform:perspective(900px) rotateX(6deg) rotateY(-6deg) translateY(-8px);box-shadow:0 16px 45px rgba(0,0,0,.12),0 0 0 4px #fff,0 0 0 6px #0070ba60;}
-    .pay-card::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(circle at 30% 20%,#0070ba1a,transparent 60%);pointer-events:none;mix-blend-mode:overlay;}
-    .pay-card i{font-size:3.5rem;color:#0070ba;margin-bottom:1rem;}
-    .pay-card h3{font-size:1.5rem;margin-bottom:.25rem;color:var(--dark);}
-    .pay-card p{color:var(--muted);}    
-    @media(max-width:480px){.pay-card{padding:2rem 1.5rem;}}
+      /* Payment Section */
+      #payment {
+        background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+      }
+      .pay-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+      .pay-card {
+        position: relative;
+        background: #fff;
+        padding: 2.5rem 2rem 3rem;
+        border-radius: calc(var(--radius) * 1.2);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08), 0 0 0 4px #fff,
+          0 0 0 6px #0070ba40;
+        max-width: 420px;
+        width: 100%;
+        transition: transform 0.45s var(--transition),
+          box-shadow 0.45s var(--transition);
+        transform-style: preserve-3d;
+        text-align: center;
+      }
+      .pay-card:hover {
+        transform: perspective(900px) rotateX(6deg) rotateY(-6deg)
+          translateY(-8px);
+        box-shadow: 0 16px 45px rgba(0, 0, 0, 0.12), 0 0 0 4px #fff,
+          0 0 0 6px #0070ba60;
+      }
+      .pay-card::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        background: radial-gradient(
+          circle at 30% 20%,
+          #0070ba1a,
+          transparent 60%
+        );
+        pointer-events: none;
+        mix-blend-mode: overlay;
+      }
+      .pay-card i {
+        font-size: 3.5rem;
+        color: #0070ba;
+        margin-bottom: 1rem;
+      }
+      .pay-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.25rem;
+        color: var(--dark);
+      }
+      .pay-card p {
+        color: var(--muted);
+      }
+      @media (max-width: 480px) {
+        .pay-card {
+          padding: 2rem 1.5rem;
+        }
+      }
 
-    /* Footer */
-    footer{background:var(--dark);color:#cbd5e1;text-align:center;padding:2.5rem 1rem;}
-    footer a{color:var(--secondary);margin:0 .5rem;}
+      /* Footer */
+      footer {
+        background: var(--dark);
+        color: #cbd5e1;
+        text-align: center;
+        padding: 2.5rem 1rem;
+      }
+      footer a {
+        color: var(--secondary);
+        margin: 0 0.5rem;
+      }
 
-    /* Media */
-    @media(max-width:600px){nav a{margin-left:.75rem;}}
-  </style>
-</head>
-<body>
-  <!-- Header -->
-  <header>
-    <a href="#" class="logo" aria-label="Home">Ali Jabbary</a>
-    <nav>
-      <a href="#subjects">Topics</a>
-      <a href="#about">About</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="#resources">Resources</a>
-      <a href="#contact" class="btn" style="padding:.5rem 1rem;font-size:.9rem;">Book Call</a>
-    </nav>
-  </header>
+      /* Media */
+      @media (max-width: 600px) {
+        nav a {
+          margin-left: 0.75rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <a href="#" class="logo" aria-label="Home">Ali Jabbary</a>
+      <nav>
+        <a href="#subjects">Topics</a>
+        <a href="#about">About</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#resources">Resources</a>
+        <a
+          href="#contact"
+          class="btn"
+          style="padding: 0.5rem 1rem; font-size: 0.9rem"
+          >Book Call</a
+        >
+      </nav>
+    </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <span class="shape one"></span>
-    <span class="shape two"></span>
-    <h1>World‑Class Tutoring & Consulting Across STEM, Business & Emerging Tech</h1>
-    <p>Learn directly from a published data scientist & chartered engineer featured in Forbes, IEEE & AWS Summit keynotes.</p>
-    <a href="#contact" class="btn">Book Free Discovery Call</a>
-  </section>
+    <!-- Hero -->
+    <section class="hero">
+      <span class="shape one"></span>
+      <span class="shape two"></span>
+      <h1>
+        World‑Class Tutoring & Consulting Across STEM, Business & Emerging Tech
+      </h1>
+      <p>
+        Learn directly from a published data scientist & chartered engineer
+        featured in Forbes, IEEE & AWS Summit keynotes.
+      </p>
+      <a href="#contact" class="btn">Book Free Discovery Call</a>
+    </section>
 
-  <!-- Subjects / Services Slider -->
-  <section id="subjects">
-    <h2 class="section-title">Tutoring Topics</h2>
-    <div class="subjects-slider-wrapper">
-      <button class="slider-btn prev" aria-label="Previous slide">
-
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-
-      </button>
-      <div class="subjects-slider">
-        <!-- Core Cards -->
-        <div class="subject-card">
-          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="Machine Learning code on screen">
-          <div class="subject-content">
-            <h3>Machine Learning & AI</h3>
-            <p>Build and deploy models, demystify algorithms, and dominate Kaggle.</p>
-            <span class="price">From $60/hr</span>
+    <!-- Subjects / Services Slider -->
+    <section id="subjects">
+      <h2 class="section-title">Tutoring Topics</h2>
+      <div class="subjects-slider-wrapper">
+        <button class="slider-btn prev" aria-label="Previous slide">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </button>
+        <div class="subjects-slider">
+          <!-- Core Cards -->
+          <div class="subject-card">
+            <img
+              src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80"
+              alt="Machine Learning code on screen"
+            />
+            <div class="subject-content">
+              <h3>Machine Learning & AI</h3>
+              <p>
+                Build and deploy models, demystify algorithms, and dominate
+                Kaggle.
+              </p>
+              <span class="price">From $60/hr</span>
+            </div>
+          </div>
+          <div class="subject-card">
+            <img
+              src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=600&q=80"
+              alt="Python code editor"
+            />
+            <div class="subject-content">
+              <h3>Python & Data Science</h3>
+              <p>
+                Data wrangling, visualization, and automation with hands‑on
+                projects.
+              </p>
+              <span class="price">From $55/hr</span>
+            </div>
+          </div>
+          <div class="subject-card">
+            <img
+              src="https://images.unsplash.com/photo-1581091012184-05c7c6a03c03?auto=format&fit=crop&w=600&q=80"
+              alt="Mechanical Engineering design"
+            />
+            <div class="subject-content">
+              <h3>Mechanical Engineering</h3>
+              <p>
+                Thermodynamics, FEM, CAD/CAE & project guidance for all levels.
+              </p>
+              <span class="price">From $65/hr</span>
+            </div>
+          </div>
+          <div class="subject-card">
+            <img
+              src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&w=600&q=80"
+              alt="Excel dashboard on laptop"
+            />
+            <div class="subject-content">
+              <h3>Excel & Data Analysis</h3>
+              <p>
+                Turn spreadsheets into insights with formulas, VBA & dashboards.
+              </p>
+              <span class="price">From $50/hr</span>
+            </div>
+          </div>
+          <div class="subject-card">
+            <img
+              src="https://images.unsplash.com/photo-1549421263-34d5a35d1c29?auto=format&fit=crop&w=600&q=80"
+              alt="Cryptocurrency chart on phone"
+            />
+            <div class="subject-content">
+              <h3>Crypto & Trading Basics</h3>
+              <p>
+                Understand blockchain, analyze charts & manage risk like a pro.
+              </p>
+              <span class="price">From $45/hr</span>
+            </div>
+          </div>
+          <div class="subject-card">
+            <img
+              src="https://images.unsplash.com/photo-1485217988980-11786ced9454?auto=format&fit=crop&w=600&q=80"
+              alt="Public speaking"
+            />
+            <div class="subject-content">
+              <h3>Confidence & Time Mgmt</h3>
+              <p>
+                Crush anxiety, own your schedule, and communicate like a boss.
+              </p>
+              <span class="price">From $40/hr</span>
+            </div>
+          </div>
+          <!-- Business & Engineering -->
+          <div class="subject-card">
+            <img
+              src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&w=600&q=80"
+              alt="Accounting paperwork and calculator"
+            />
+            <div class="subject-content">
+              <h3>Accounting Principles</h3>
+              <p>
+                Master debits, credits & financial statements for academic or
+                CPA.
+              </p>
+              <span class="price">From $50/hr</span>
+            </div>
+          </div>
+          <div class="subject-card">
+            <img
+              src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80"
+              alt="Finance graphs on tablet"
+            />
+            <div class="subject-content">
+              <h3>Corporate Finance</h3>
+              <p>
+                Valuation, capital budgeting & financial modeling with Excel.
+              </p>
+              <span class="price">From $55/hr</span>
+            </div>
+          </div>
+          <div class="subject-card">
+            <img
+              src="https://images.unsplash.com/photo-1556157382-97eda0e1635c?auto=format&fit=crop&w=600&q=80"
+              alt="LLM concept art"
+            />
+            <div class="subject-content">
+              <h3>Large Language Models</h3>
+              <p>
+                Prompt engineering, fine‑tuning & deploying LLMs for real apps.
+              </p>
+              <span class="price">From $70/hr</span>
+            </div>
+          </div>
+          <div class="subject-card">
+            <img
+              src="https://images.unsplash.com/photo-1581090700227-3e7a7ffabd1f?auto=format&fit=crop&w=600&q=80"
+              alt="SolidWorks CAD model"
+            />
+            <div class="subject-content">
+              <h3>SolidWorks CAD</h3>
+              <p>
+                Parametric modeling, assemblies & drawings for industry
+                standards.
+              </p>
+              <span class="price">From $60/hr</span>
+            </div>
+          </div>
+          <div class="subject-card">
+            <img
+              src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=600&q=80"
+              alt="ANSYS simulation visualization"
+            />
+            <div class="subject-content">
+              <h3>ANSYS FEA/CFD</h3>
+              <p>
+                Set up simulations, interpret results & optimize engineering
+                designs.
+              </p>
+              <span class="price">From $70/hr</span>
+            </div>
+          </div>
+          <div class="subject-card">
+            <img
+              src="https://images.unsplash.com/photo-1581092334499-2fe20b3d031b?auto=format&fit=crop&w=600&q=80"
+              alt="AutoCAD blueprint on screen"
+            />
+            <div class="subject-content">
+              <h3>AutoCAD Drafting</h3>
+              <p>2D & 3D drafting, layers, blocks & plotting like a pro.</p>
+              <span class="price">From $55/hr</span>
+            </div>
+          </div>
+          <div class="subject-card">
+            <img
+              src="https://images.unsplash.com/photo-1521790361509-2d3c056f9d02?auto=format&fit=crop&w=600&q=80"
+              alt="Sage accounting software screenshot"
+            />
+            <div class="subject-content">
+              <h3>Sage Accounting</h3>
+              <p>
+                Set up ledgers, automate invoicing & generate insightful
+                reports.
+              </p>
+              <span class="price">From $50/hr</span>
+            </div>
+          </div>
+          <!-- NEW Math Topics -->
+          <div class="subject-card">
+            <img
+              src="https://images.unsplash.com/photo-1551524553-8b5dc9929b1c?auto=format&fit=crop&w=600&q=80"
+              alt="Math equations on chalkboard"
+            />
+            <div class="subject-content">
+              <h3>Mathematics (All Levels)</h3>
+              <p>
+                Foundations to advanced calculus, tailored to your syllabus.
+              </p>
+              <span class="price">From $45/hr</span>
+            </div>
+          </div>
+          <div class="subject-card">
+            <img
+              src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=600&q=80"
+              alt="Algebra formulas"
+            />
+            <div class="subject-content">
+              <h3>Algebra</h3>
+              <p>Linear, abstract & everything between – demystified.</p>
+              <span class="price">From $40/hr</span>
+            </div>
+          </div>
+          <div class="subject-card">
+            <img
+              src="https://images.unsplash.com/photo-1521302081687-5b29c93ad1b7?auto=format&fit=crop&w=600&q=80"
+              alt="Physics experiment"
+            />
+            <div class="subject-content">
+              <h3>Physics</h3>
+              <p>Mechanics, electricity & modern physics with real demos.</p>
+              <span class="price">From $45/hr</span>
+            </div>
           </div>
         </div>
-        <div class="subject-card">
-          <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=600&q=80" alt="Python code editor">
-          <div class="subject-content">
-            <h3>Python & Data Science</h3>
-            <p>Data wrangling, visualization, and automation with hands‑on projects.</p>
-            <span class="price">From $55/hr</span>
-          </div>
+        <button class="slider-btn next" aria-label="Next slide">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2 class="section-title">About Ali</h2>
+      <div class="about-wrapper">
+        <div class="about-img">
+          <img
+            src="assets/img/Ali_Jabbary.png"
+            alt="Ali Jabbary portrait"
+          />
         </div>
-        <div class="subject-card">
-          <img src="https://images.unsplash.com/photo-1581091012184-05c7c6a03c03?auto=format&fit=crop&w=600&q=80" alt="Mechanical Engineering design">
-          <div class="subject-content">
-            <h3>Mechanical Engineering</h3>
-            <p>Thermodynamics, FEM, CAD/CAE & project guidance for all levels.</p>
-            <span class="price">From $65/hr</span>
-          </div>
-        </div>
-        <div class="subject-card">
-          <img src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&w=600&q=80" alt="Excel dashboard on laptop">
-          <div class="subject-content">
-            <h3>Excel & Data Analysis</h3>
-            <p>Turn spreadsheets into insights with formulas, VBA & dashboards.</p>
-            <span class="price">From $50/hr</span>
-          </div>
-        </div>
-        <div class="subject-card">
-          <img src="https://images.unsplash.com/photo-1549421263-34d5a35d1c29?auto=format&fit=crop&w=600&q=80" alt="Cryptocurrency chart on phone">
-          <div class="subject-content">
-            <h3>Crypto & Trading Basics</h3>
-            <p>Understand blockchain, analyze charts & manage risk like a pro.</p>
-            <span class="price">From $45/hr</span>
-          </div>
-        </div>
-        <div class="subject-card">
-          <img src="https://images.unsplash.com/photo-1485217988980-11786ced9454?auto=format&fit=crop&w=600&q=80" alt="Public speaking">
-          <div class="subject-content">
-            <h3>Confidence & Time Mgmt</h3>
-            <p>Crush anxiety, own your schedule, and communicate like a boss.</p>
-            <span class="price">From $40/hr</span>
-          </div>
-        </div>
-        <!-- Business & Engineering -->
-        <div class="subject-card">
-          <img src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&w=600&q=80" alt="Accounting paperwork and calculator">
-          <div class="subject-content">
-            <h3>Accounting Principles</h3>
-            <p>Master debits, credits & financial statements for academic or CPA.</p>
-            <span class="price">From $50/hr</span>
-          </div>
-        </div>
-        <div class="subject-card">
-          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="Finance graphs on tablet">
-          <div class="subject-content">
-            <h3>Corporate Finance</h3>
-            <p>Valuation, capital budgeting & financial modeling with Excel.</p>
-            <span class="price">From $55/hr</span>
-          </div>
-        </div>
-        <div class="subject-card">
-          <img src="https://images.unsplash.com/photo-1556157382-97eda0e1635c?auto=format&fit=crop&w=600&q=80" alt="LLM concept art">
-          <div class="subject-content">
-            <h3>Large Language Models</h3>
-            <p>Prompt engineering, fine‑tuning & deploying LLMs for real apps.</p>
-            <span class="price">From $70/hr</span>
-          </div>
-        </div>
-        <div class="subject-card">
-          <img src="https://images.unsplash.com/photo-1581090700227-3e7a7ffabd1f?auto=format&fit=crop&w=600&q=80" alt="SolidWorks CAD model">
-          <div class="subject-content">
-            <h3>SolidWorks CAD</h3>
-            <p>Parametric modeling, assemblies & drawings for industry standards.</p>
-            <span class="price">From $60/hr</span>
-          </div>
-        </div>
-        <div class="subject-card">
-          <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=600&q=80" alt="ANSYS simulation visualization">
-          <div class="subject-content">
-            <h3>ANSYS FEA/CFD</h3>
-            <p>Set up simulations, interpret results & optimize engineering designs.</p>
-            <span class="price">From $70/hr</span>
-          </div>
-        </div>
-        <div class="subject-card">
-          <img src="https://images.unsplash.com/photo-1581092334499-2fe20b3d031b?auto=format&fit=crop&w=600&q=80" alt="AutoCAD blueprint on screen">
-          <div class="subject-content">
-            <h3>AutoCAD Drafting</h3>
-            <p>2D & 3D drafting, layers, blocks & plotting like a pro.</p>
-            <span class="price">From $55/hr</span>
-          </div>
-        </div>
-        <div class="subject-card">
-          <img src="https://images.unsplash.com/photo-1521790361509-2d3c056f9d02?auto=format&fit=crop&w=600&q=80" alt="Sage accounting software screenshot">
-          <div class="subject-content">
-            <h3>Sage Accounting</h3>
-            <p>Set up ledgers, automate invoicing & generate insightful reports.</p>
-            <span class="price">From $50/hr</span>
-          </div>
-        </div>
-        <!-- NEW Math Topics -->
-        <div class="subject-card">
-          <img src="https://images.unsplash.com/photo-1551524553-8b5dc9929b1c?auto=format&fit=crop&w=600&q=80" alt="Math equations on chalkboard">
-          <div class="subject-content">
-            <h3>Mathematics (All Levels)</h3>
-            <p>Foundations to advanced calculus, tailored to your syllabus.</p>
-            <span class="price">From $45/hr</span>
-          </div>
-        </div>
-        <div class="subject-card">
-          <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=600&q=80" alt="Algebra formulas">
-          <div class="subject-content">
-            <h3>Algebra</h3>
-            <p>Linear, abstract & everything between – demystified.</p>
-            <span class="price">From $40/hr</span>
-          </div>
-        </div>
-        <div class="subject-card">
-          <img src="https://images.unsplash.com/photo-1521302081687-5b29c93ad1b7?auto=format&fit=crop&w=600&q=80" alt="Physics experiment">
-          <div class="subject-content">
-            <h3>Physics</h3>
-            <p>Mechanics, electricity & modern physics with real demos.</p>
-            <span class="price">From $45/hr</span>
-          </div>
+        
+        <div class="about-text">
+          <p>
+            <strong>Ali Jabbary, M.Sc., P.Eng.</strong> is an
+            internationally‑recognized tutor and consultant trusted by
+            Fortune 500 teams and 500+ individual learners worldwide.
+          </p>
+          <ul>
+            <li>
+              <strong>15 years</strong> delivering data‑driven solutions &
+              coaching across Iran and Canada.
+            </li>
+            <li>
+              Featured speaker at <strong>AWS Summit 2024</strong> and
+              contributor to <strong>Forbes Tech Council</strong>.
+            </li>
+            <li>
+              Published author in <strong>IEEE Transactions</strong> on
+              machine‑learning‑powered simulations.
+            </li>
+            <li>
+              Holds dual degrees in Mechanical Engineering & Data Science plus
+              10+ industry certifications.
+            </li>
+          </ul>
+          <p>
+            Ali’s mission is simple:
+            <em>transform ambitious students into high‑impact professionals</em>
+            through tailored, results‑oriented instruction.
+          </p>
         </div>
       </div>
-      <button class="slider-btn next" aria-label="Next slide">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="9 18 15 12 9 6" />
-        </svg>
-      </button>
-      
-    </div>
-  </section>
+    </section>
 
-  <!-- About -->
-  <section id="about">
-    <h2 class="section-title">About Ali</h2>
-    <div class="about-wrapper">
-      <div class="about-img">
-        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=500&q=80" alt="Ali Jabbary portrait placeholder">
+    <!-- Methodology -->
+    <section id="method">
+      <h2 class="section-title">How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <i class="fa-solid fa-calendar-check"></i>
+          <h4>1. Free Call</h4>
+          <p>We discuss goals & craft your custom roadmap.</p>
+        </div>
+        <div class="step">
+          <i class="fa-solid fa-laptop-code"></i>
+          <h4>2. Hands‑On Sessions</h4>
+          <p>Live, interactive lessons with real projects.</p>
+        </div>
+        <div class="step">
+          <i class="fa-solid fa-chart-line"></i>
+          <h4>3. Progress Tracking</h4>
+          <p>Weekly recaps & resources to keep you on point.</p>
+        </div>
+        <div class="step">
+          <i class="fa-solid fa-trophy"></i>
+          <h4>4. Results Unlocked</h4>
+          <p>Apply new skills, ace exams, or ship products.</p>
+        </div>
       </div>
-      <div class="about-text">
-        <p><strong>Ali Jabbary, M.Sc., P.Eng.</strong> is an internationally‑recognized tutor and consultant trusted by Fortune 500 teams and 500+ individual learners worldwide.</p>
-        <ul>
-          <li><strong>15 years</strong> delivering data‑driven solutions & coaching across Iran and Canada.</li>
-          <li>Featured speaker at <strong>AWS Summit 2024</strong> and contributor to <strong>Forbes Tech Council</strong>.</li>
-          <li>Published author in <strong>IEEE Transactions</strong> on machine‑learning‑powered simulations.</li>
-          <li>Holds dual degrees in Mechanical Engineering & Data Science plus 10+ industry certifications.</li>
-        </ul>
-        <p>Ali’s mission is simple: <em>transform ambitious students into high‑impact professionals</em> through tailored, results‑oriented instruction.</p>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certs">
+      <h2 class="section-title">Certifications & Badges</h2>
+      <div class="cert-grid">
+        <img
+          src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/aws.svg"
+          alt="AWS Certified logo"
+          title="AWS Certified"
+        />
+        <img
+          src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/tensorflow.svg"
+          alt="TensorFlow Developer"
+          title="TensorFlow Developer"
+        />
+        <img
+          src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/solidworks.svg"
+          alt="SolidWorks Professional"
+          title="SolidWorks Professional"
+        />
+        <img
+          src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/ansys.svg"
+          alt="ANSYS"
+          title="ANSYS Expert"
+        />
+        <img
+          src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/python.svg"
+          alt="Python"
+          title="Python Pro"
+        />
+        <img
+          src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/sage.svg"
+          alt="Sage Accounting"
+          title="Sage Certified"
+        />
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Methodology -->
-  <section id="method">
-    <h2 class="section-title">How It Works</h2>
-    <div class="steps">
-      <div class="step"><i class="fa-solid fa-calendar-check"></i><h4>1. Free Call</h4><p>We discuss goals & craft your custom roadmap.</p></div>
-      <div class="step"><i class="fa-solid fa-laptop-code"></i><h4>2. Hands‑On Sessions</h4><p>Live, interactive lessons with real projects.</p></div>
-      <div class="step"><i class="fa-solid fa-chart-line"></i><h4>3. Progress Tracking</h4><p>Weekly recaps & resources to keep you on point.</p></div>
-      <div class="step"><i class="fa-solid fa-trophy"></i><h4>4. Results Unlocked</h4><p>Apply new skills, ace exams, or ship products.</p></div>
-    </div>
-  </section>
+    <!-- Resources -->
+    <section id="resources">
+      <h2 class="section-title">Free Resources</h2>
+      <div class="resource-grid">
+        <a
+          class="resource-card"
+          href="https://github.com/yourrepo"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=600&q=80"
+            alt="GitHub code repo"
+          />
+          <div>
+            <h4>Python Data Science Boilerplate</h4>
+            <p>Ready‑to‑use notebooks & utils for any data project.</p>
+          </div>
+        </a>
+        <a
+          class="resource-card"
+          href="https://yourblog.com/llm-cheatsheet"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1581091215367-59ab3f8d17e0?auto=format&fit=crop&w=600&q=80"
+            alt="LLM cheat sheet"
+          />
+          <div>
+            <h4>LLM Prompt Engineering Cheat Sheet</h4>
+            <p>Key patterns & examples to boost generative AI output.</p>
+          </div>
+        </a>
+        <a
+          class="resource-card"
+          href="https://yourblog.com/finance-formulas"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80"
+            alt="Finance formulas"
+          />
+          <div>
+            <h4>Essential Finance Formulas PDF</h4>
+            <p>One‑page summary for valuation, NPV, IRR & more.</p>
+          </div>
+        </a>
+      </div>
+    </section>
 
-  <!-- Certifications -->
-  <section id="certs">
-    <h2 class="section-title">Certifications & Badges</h2>
-    <div class="cert-grid">
-      <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/aws.svg" alt="AWS Certified logo" title="AWS Certified">
-      <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/tensorflow.svg" alt="TensorFlow Developer" title="TensorFlow Developer">
-      <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/solidworks.svg" alt="SolidWorks Professional" title="SolidWorks Professional">
-      <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/ansys.svg" alt="ANSYS" title="ANSYS Expert">
-      <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/python.svg" alt="Python" title="Python Pro">
-      <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/sage.svg" alt="Sage Accounting" title="Sage Certified">
-    </div>
-  </section>
+    <!-- Testimonials -->
+    <section id="testimonials">
+      <h2 class="section-title">Student Success Stories</h2>
+      <div class="testimonial">
+        “Ali simplified ML algorithms better than any professor. Landed my first
+        data job within 3 months!”
+        <div class="testimonial-author">— Sara M., Data Analyst</div>
+      </div>
+      <div class="testimonial">
+        “I was drowning in my engineering thesis. Ali’s guidance turned chaos
+        into a published paper.”
+        <div class="testimonial-author">— Reza K., MSc Mechanical Eng.</div>
+      </div>
+    </section>
 
-  <!-- Resources -->
-  <section id="resources">
-    <h2 class="section-title">Free Resources</h2>
-    <div class="resource-grid">
-      <a class="resource-card" href="https://github.com/yourrepo" target="_blank" rel="noopener">
-        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=600&q=80" alt="GitHub code repo">
-        <div><h4>Python Data Science Boilerplate</h4><p>Ready‑to‑use notebooks & utils for any data project.</p></div>
-      </a>
-      <a class="resource-card" href="https://yourblog.com/llm-cheatsheet" target="_blank" rel="noopener">
-        <img src="https://images.unsplash.com/photo-1581091215367-59ab3f8d17e0?auto=format&fit=crop&w=600&q=80" alt="LLM cheat sheet">
-        <div><h4>LLM Prompt Engineering Cheat Sheet</h4><p>Key patterns & examples to boost generative AI output.</p></div>
-      </a>
-      <a class="resource-card" href="https://yourblog.com/finance-formulas" target="_blank" rel="noopener">
-        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="Finance formulas">
-        <div><h4>Essential Finance Formulas PDF</h4><p>One‑page summary for valuation, NPV, IRR & more.</p></div>
-      </a>
-    </div>
-  </section>
+    <!-- FAQ -->
+    <section id="faq">
+      <h2 class="section-title">FAQ</h2>
+      <details>
+        <summary>Do you teach beginners?</summary>
+        <p>
+          Absolutely! Lessons are tailored from zero‑to‑hero, no prior
+          experience required.
+        </p>
+      </details>
+      <details>
+        <summary>Where do sessions take place?</summary>
+        <p>
+          Online via Zoom or Google Meet – recordings included so you can review
+          anytime.
+        </p>
+      </details>
+      <details>
+        <summary>Can I get help with my live project?</summary>
+        <p>
+          Yes – project mentoring & debugging are core offerings. NDA friendly.
+        </p>
+      </details>
+    </section>
 
-  <!-- Testimonials -->
-  <section id="testimonials">
-    <h2 class="section-title">Student Success Stories</h2>
-    <div class="testimonial">“Ali simplified ML algorithms better than any professor. Landed my first data job within 3 months!”<div class="testimonial-author">— Sara M., Data Analyst</div></div>
-    <div class="testimonial">“I was drowning in my engineering thesis. Ali’s guidance turned chaos into a published paper.”<div class="testimonial-author">— Reza K., MSc Mechanical Eng.</div></div>
-  </section>
+    <!-- Contact -->
+    <section id="contact">
+      <h2 class="section-title">Get in Touch</h2>
+      <form action="https://formspree.io/f/yourformid" method="POST">
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          required
+          aria-label="Name"
+        />
+        <input
+          type="email"
+          name="_replyto"
+          placeholder="Email Address"
+          required
+          aria-label="Email"
+        />
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="Tell me about your goals…"
+          required
+          aria-label="Message"
+        ></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </section>
 
-  <!-- FAQ -->
-  <section id="faq">
-    <h2 class="section-title">FAQ</h2>
-    <details><summary>Do you teach beginners?</summary><p>Absolutely! Lessons are tailored from zero‑to‑hero, no prior experience required.</p></details>
-    <details><summary>Where do sessions take place?</summary><p>Online via Zoom or Google Meet – recordings included so you can review anytime.</p></details>
-    <details><summary>Can I get help with my live project?</summary><p>Yes – project mentoring & debugging are core offerings. NDA friendly.</p></details>
-  </section>
+    <!-- Payment -->
+    <section id="payment">
+      <h2 class="section-title">Easy Payments</h2>
+      <div class="pay-wrapper">
+        <a
+          href="https://paypal.me/AliJabbary1"
+          target="_blank"
+          class="pay-card"
+          aria-label="Pay Ali Jabbary via PayPal"
+        >
+          <i class="fa-brands fa-paypal"></i>
+          <h3>Secure PayPal Checkout</h3>
+          <p>Click to settle your tutoring invoice in seconds.</p>
+        </a>
+      </div>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2 class="section-title">Get in Touch</h2>
-    <form action="https://formspree.io/f/yourformid" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required aria-label="Name">
-      <input type="email" name="_replyto" placeholder="Email Address" required aria-label="Email">
-      <textarea name="message" rows="5" placeholder="Tell me about your goals…" required aria-label="Message"></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </section>
+    <!-- Footer -->
+    <footer>
+      <p>&copy; <span id="year"></span> Ali Jabbary. All rights reserved.</p>
+      <div>
+        <a href="https://linkedin.com/" aria-label="LinkedIn"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/" aria-label="GitHub"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="mailto:Light.knight32@gmail.com" aria-label="Email"
+          ><i class="fa-solid fa-envelope"></i
+        ></a>
+      </div>
+    </footer>
 
-  <!-- Payment -->
-  <section id="payment">
-    <h2 class="section-title">Easy Payments</h2>
-    <div class="pay-wrapper">
-      <a href="https://paypal.me/AliJabbary1" target="_blank" class="pay-card" aria-label="Pay Ali Jabbary via PayPal">
-        <i class="fa-brands fa-paypal"></i>
-        <h3>Secure PayPal Checkout</h3>
-        <p>Click to settle your tutoring invoice in seconds.</p>
-      </a>
-    </div>
-  </section>
+    <!-- Scripts -->
+    <script>
+      // Update footer year
+      document.getElementById('year').textContent = new Date().getFullYear();
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; <span id="year"></span> Ali Jabbary. All rights reserved.</p>
-    <div>
-      <a href="https://linkedin.com/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/" aria-label="GitHub"><i class="fab fa-github"></i></a>
-      <a href="mailto:Light.knight32@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-    </div>
-  </footer>
+      // IntersectionObserver for fade‑in animation
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+      document
+        .querySelectorAll('section, .subject-card, .step, .resource-card')
+        .forEach((el) => {
+          el.classList.add('fade');
+          observer.observe(el);
+        });
 
-  <!-- Scripts -->
-  <script>
-    // Update footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
+      // Slider functionality
+      const slider = document.querySelector('.subjects-slider');
+      const prevBtn = document.querySelector('.slider-btn.prev');
+      const nextBtn = document.querySelector('.slider-btn.next');
+      let autoScrollInterval;
 
-    // IntersectionObserver for fade‑in animation
-    const observer = new IntersectionObserver(entries=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){entry.target.classList.add('visible');}
+      function scrollToNext() {
+        const cardWidth =
+          slider.querySelector('.subject-card').offsetWidth + 32; // card width + gap
+        if (
+          slider.scrollLeft + slider.clientWidth >=
+          slider.scrollWidth - cardWidth
+        ) {
+          slider.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          slider.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        }
+      }
+      function scrollToPrev() {
+        const cardWidth =
+          slider.querySelector('.subject-card').offsetWidth + 32;
+        if (slider.scrollLeft === 0) {
+          slider.scrollTo({ left: slider.scrollWidth, behavior: 'smooth' });
+        } else {
+          slider.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+        }
+      }
+      nextBtn.addEventListener('click', () => {
+        clearInterval(autoScrollInterval);
+        scrollToNext();
+        startAutoScroll();
       });
-    },{threshold:.15});
-    document.querySelectorAll('section, .subject-card, .step, .resource-card').forEach(el=>{el.classList.add('fade');observer.observe(el);});
+      prevBtn.addEventListener('click', () => {
+        clearInterval(autoScrollInterval);
+        scrollToPrev();
+        startAutoScroll();
+      });
 
-    // Slider functionality
-    const slider = document.querySelector('.subjects-slider');
-    const prevBtn = document.querySelector('.slider-btn.prev');
-    const nextBtn = document.querySelector('.slider-btn.next');
-    let autoScrollInterval;
-
-    function scrollToNext(){
-      const cardWidth = slider.querySelector('.subject-card').offsetWidth + 32; // card width + gap
-      if(slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - cardWidth){
-        slider.scrollTo({left:0,behavior:'smooth'});
-      }else{
-        slider.scrollBy({left:cardWidth,behavior:'smooth'});
+      function startAutoScroll() {
+        autoScrollInterval = setInterval(scrollToNext, 4000); // 4‑second cadence
       }
-    }
-    function scrollToPrev(){
-      const cardWidth = slider.querySelector('.subject-card').offsetWidth + 32;
-      if(slider.scrollLeft === 0){
-        slider.scrollTo({left:slider.scrollWidth,behavior:'smooth'});
-      }else{
-        slider.scrollBy({left:-cardWidth,behavior:'smooth'});
+      startAutoScroll();
+    </script>
+    <style>
+      /* Extra fade‑in */
+      .fade {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s var(--transition),
+          transform 0.6s var(--transition);
       }
-    }
-    nextBtn.addEventListener('click',()=>{clearInterval(autoScrollInterval);scrollToNext();startAutoScroll();});
-    prevBtn.addEventListener('click',()=>{clearInterval(autoScrollInterval);scrollToPrev();startAutoScroll();});
-
-    function startAutoScroll(){
-      autoScrollInterval = setInterval(scrollToNext, 4000); // 4‑second cadence
-    }
-    startAutoScroll();
-  </script>
-  <style>
-    /* Extra fade‑in */
-    .fade{opacity:0;transform:translateY(30px);transition:opacity .6s var(--transition),transform .6s var(--transition);}    
-    .fade.visible{opacity:1;transform:none;}
-  </style>
-</body>
+      .fade.visible {
+        opacity: 1;
+        transform: none;
+      }
+    </style>
+  </body>
 </html>
