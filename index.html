@@ -480,6 +480,31 @@
          margin-left: 0.75rem;
          }
          }
+      
+         .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+            z-index: 9999;
+        }
+
+          .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
       </style>
       <!-- Google tag (gtag.js) -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-PF85DJLT1P"></script>
@@ -1097,5 +1122,23 @@
          transform: none;
          }
       </style>
+
+    <!-- At the end of body -->
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="back-to-top">↑</button>
+
+    <script>
+      // your existing scroll code...
+
+      const backToTopBtn = document.querySelector('.back-to-top');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          backToTopBtn.classList.add('show');
+        } else {
+          backToTopBtn.classList.remove('show');
+        }
+      });
+    </script>
+
+
    </body>
 </html>
