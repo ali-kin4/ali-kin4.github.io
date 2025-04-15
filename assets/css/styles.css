@@ -586,69 +586,74 @@ footer a {
 /* ===== MOBILE STYLES ===== */
 @media (max-width: 768px) {
 
-	/* hide the list by default (beats the desktop rule’s specificity) */
-	nav ul.menu{
-	  display: none;              /* 🔒 hidden until checkbox checked */
+	nav ul.menu {
+	  display: none;
 	  flex-direction: column;
 	  position: absolute;
 	  right: 1rem;
 	  top: 60px;
 	  background: #fff;
 	  border-radius: 0.5rem;
-	  box-shadow: 0 4px 12px rgba(0,0,0,.1);
+	  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 	  padding: 1rem;
 	  z-index: 1000;
+	  width: 180px;
+	  animation: slideDown 0.3s ease-out;
 	}
   
-	nav ul.menu li{
-	  margin-bottom: .75rem;
+	nav ul.menu li {
+	  margin-bottom: 0.75rem;
 	}
   
-	/* show hamburger icon */
-	.menu-icon{
+	nav ul.menu li:last-child a.btn {
+	  display: block;
+	  margin-top: 0.5rem;
+	  font-size: 0.9rem;
+	  padding: 0.6rem 1.2rem;
+	  border-radius: 1.25rem;
+	  text-align: center;
+	}
+  
+	.menu-icon {
 	  display: block;
 	  font-size: 1.8rem;
 	  cursor: pointer;
-	  padding: .5rem;
+	  padding: 0.5rem;
 	  color: var(--primary);
 	}
   
-	/* when the checkbox is checked, reveal the menu */
 	#menu-toggle:checked ~ ul.menu {
-		display: flex;
+	  display: flex;
 	}
-	  
-	@media (max-width: 768px) {
-		nav ul.menu {
-		  display: none;
-		  flex-direction: column;
-		  position: absolute;
-		  right: 1rem;
-		  top: 60px;
-		  background: #fff;
-		  border-radius: 0.5rem;
-		  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-		  padding: 1rem;
-		  z-index: 1000;
-		}
-	  
-		nav ul.menu li {
-		  margin-bottom: 0.75rem;
-		}
-	  
-		.menu-icon {
-		  display: block;
-		  font-size: 1.8rem;
-		  cursor: pointer;
-		  padding: 0.5rem;
-		  color: var(--primary);
-		}
-	  
-		/* ✅ NEW FIXED SELECTOR */
-		#menu-toggle:checked ~ ul.menu {
-		  display: flex;
-		}
+  
+	@keyframes slideDown {
+	  from {
+		opacity: 0;
+		transform: translateY(-10px);
 	  }
+	  to {
+		opacity: 1;
+		transform: translateY(0);
+	  }
+	}
+  }
+  
+  /* ===== DESKTOP OVERRIDE ===== */
+  @media (min-width: 769px){
+	nav ul.menu {
+	  display: flex;
+	  gap: 1.5rem;
+	  list-style: none;
+	  margin: 0;
+	  padding: 0;
+	  align-items: center;
+	}
+  
+	.menu-icon {
+	  display: none;
+	}
+  }
+  
 	  
   
   /* ===== DESKTOP OVERRIDE (optional but tidy) ===== */
