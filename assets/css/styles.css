@@ -564,10 +564,11 @@ footer a {
 	font-size: 1.8rem;
 	cursor: pointer;
 	padding: 0.5rem;
+	color: var(--primary);
 }
 
 .menu {
-	display: flex;
+	/* display: flex; */
 	list-style: none;
 	gap: 1rem;
 }
@@ -575,40 +576,94 @@ footer a {
 .menu li a {
 	font-weight: 600;
 	color: var(--dark);
+	text-decoration: none;
 }
 
 #menu-toggle {
 	display: none;
 }
 
-/* MOBILE STYLES */
+/* ===== MOBILE STYLES ===== */
 @media (max-width: 768px) {
-	.menu {
-		display: none;
-		flex-direction: column;
-		position: absolute;
-		right: 1rem;
-		top: 60px;
-		background: #fff;
-		border-radius: 0.5rem;
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-		padding: 1rem;
-		z-index: 1000;
-	}
 
-	.menu li {
-		margin-bottom: 0.75rem;
+	/* hide the list by default (beats the desktop rule’s specificity) */
+	nav ul.menu{
+	  display: none;              /* 🔒 hidden until checkbox checked */
+	  flex-direction: column;
+	  position: absolute;
+	  right: 1rem;
+	  top: 60px;
+	  background: #fff;
+	  border-radius: 0.5rem;
+	  box-shadow: 0 4px 12px rgba(0,0,0,.1);
+	  padding: 1rem;
+	  z-index: 1000;
 	}
-
-	.menu-icon {
-		display: block;
-		color: var(--primary);
+  
+	nav ul.menu li{
+	  margin-bottom: .75rem;
 	}
-
-	#menu-toggle:checked+.menu-icon+.menu {
+  
+	/* show hamburger icon */
+	.menu-icon{
+	  display: block;
+	  font-size: 1.8rem;
+	  cursor: pointer;
+	  padding: .5rem;
+	  color: var(--primary);
+	}
+  
+	/* when the checkbox is checked, reveal the menu */
+	#menu-toggle:checked ~ ul.menu {
 		display: flex;
 	}
-}
+	  
+	@media (max-width: 768px) {
+		nav ul.menu {
+		  display: none;
+		  flex-direction: column;
+		  position: absolute;
+		  right: 1rem;
+		  top: 60px;
+		  background: #fff;
+		  border-radius: 0.5rem;
+		  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+		  padding: 1rem;
+		  z-index: 1000;
+		}
+	  
+		nav ul.menu li {
+		  margin-bottom: 0.75rem;
+		}
+	  
+		.menu-icon {
+		  display: block;
+		  font-size: 1.8rem;
+		  cursor: pointer;
+		  padding: 0.5rem;
+		  color: var(--primary);
+		}
+	  
+		/* ✅ NEW FIXED SELECTOR */
+		#menu-toggle:checked ~ ul.menu {
+		  display: flex;
+		}
+	  }
+	  
+  
+  /* ===== DESKTOP OVERRIDE (optional but tidy) ===== */
+  @media (min-width: 769px){
+	nav ul.menu{
+	  display: flex;
+	  gap: 1.5rem;
+	  list-style: none;
+	  margin: 0;
+	  padding: 0;
+	  align-items: center;
+	}
+	.menu-icon{ display:none; }   /* hide hamburger on large screens */
+  }
+  
 
 /* Extra fade‑in */
 .fade {
