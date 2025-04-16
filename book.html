@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Book a Session | Ali Jabbary</title>
-  <!-- Link to your main stylesheet if needed -->
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    /* Booking Page Specific Styles */
     :root {
       --primary: #2563EB;
       --radius: 0.9rem;
@@ -37,7 +32,7 @@
       border-radius: var(--radius);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
-    .booking-container h1 {
+    h1 {
       text-align: center;
       margin-bottom: 1.5rem;
       color: var(--primary);
@@ -69,41 +64,171 @@
       transform: translateY(-3px);
       box-shadow: 0 8px 16px rgba(37, 99, 235, 0.25);
     }
+
+    /* iOS-style toggle switch */
+    .toggle-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .toggle-label {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 28px;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 34px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 20px;
+      width: 20px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+    input:checked + .slider {
+      background-color: var(--primary);
+    }
+    input:checked + .slider:before {
+      transform: translateX(22px);
+    }
   </style>
 </head>
 <body>
   <div class="booking-container">
     <h1>Book a Session</h1>
-    <form action="https://formspree.io/f/xkgjajga" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
-      <input type="email" name="_replyto" placeholder="Your Email" required aria-label="Your Email">
-      <input type="tel" name="phone" placeholder="Your Phone Number" required aria-label="Your Phone Number">
-      
-      <!-- Subject Dropdown for Topic-specific Booking -->
-      <select name="subject" required aria-label="Select a Subject">
+    <form id="booking-form" action="https://formspree.io/f/xkgjajga" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="_replyto" placeholder="Your Email" required />
+      <input type="tel" name="phone" placeholder="Your Phone Number" required />
+
+      <select name="subject" required>
         <option value="" disabled selected>Select a Subject</option>
-        <option value="Machine Learning & AI">Machine Learning & AI</option>
-        <option value="Python & Data Science">Python & Data Science</option>
-        <option value="Mechanical Engineering">Mechanical Engineering</option>
-        <option value="Excel & Data Analysis">Excel & Data Analysis</option>
-        <option value="Crypto & Trading Basics">Crypto & Trading Basics</option>
-        <option value="Accounting Principles">Accounting Principles</option>
-        <option value="Corporate Finance">Corporate Finance</option>
-        <option value="Large Language Models">Large Language Models</option>
-        <option value="SolidWorks CAD">SolidWorks CAD</option>
-        <option value="ANSYS FEA/CFD">ANSYS FEA/CFD</option>
-        <option value="AutoCAD Drafting">AutoCAD Drafting</option>
-        <option value="Sage Accounting">Sage Accounting</option>
-        <option value="Mathematics (All Levels)">Mathematics (All Levels)</option>
-        <option value="Algebra">Algebra</option>
-        <option value="Physics">Physics</option>
+        <option>Machine Learning & AI</option>
+        <option>Python & Data Science</option>
+        <option>Mechanical Engineering</option>
+        <option>Excel & Data Analysis</option>
+        <option>Crypto & Trading Basics</option>
+        <option>Accounting Principles</option>
+        <option>Corporate Finance</option>
+        <option>Large Language Models</option>
+        <option>SolidWorks CAD</option>
+        <option>ANSYS FEA/CFD</option>
+        <option>AutoCAD Drafting</option>
+        <option>Sage Accounting</option>
+        <option>Mathematics (All Levels)</option>
+        <option>Algebra</option>
+        <option>Physics</option>
       </select>
+
+      <input type="date" name="date" required />
+      <input type="time" name="time" required />
+
+      <!-- AI SmartFill Toggle -->
+      <div class="toggle-container">
+        <span class="toggle-label">🧠 SmartFill (use AI to auto-write my message)</span>
+        <label class="switch">
+          <input type="checkbox" id="aiToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
       
-      <input type="date" name="date" required aria-label="Preferred Date">
-      <input type="time" name="time" required aria-label="Preferred Time">
-      <textarea name="message" rows="5" placeholder="Tell me about your tutoring needs" required aria-label="Your Message"></textarea>
+      <input type="text" id="aiPrompt" placeholder="Short description (e.g. help with Python pandas)">
+      <button type="button" id="generateBtn" class="btn" style="background:#9333ea; display:none;">🪄 Generate Request</button>
+      
+      <textarea name="message" rows="5" placeholder="Tell me about your tutoring needs…" required></textarea>
+      
+
       <button type="submit" class="btn">Send Booking Request</button>
     </form>
+
+    <p id="response-msg" style="margin-top: 1rem; font-weight: bold; color: green; display: none;"></p>
   </div>
+
+  <script>
+    const form = document.getElementById("booking-form");
+    const msg = document.getElementById("response-msg");
+    const aiToggle = document.getElementById("aiToggle");
+    const generateBtn = document.getElementById("generateBtn");
+    const aiPrompt = document.getElementById("aiPrompt");
+    const msgBox = document.querySelector("textarea[name='message']");
+  
+    // Show/hide AI Generate button
+    aiToggle.addEventListener("change", () => {
+      generateBtn.style.display = aiToggle.checked ? "block" : "none";
+    });
+  
+    // Generate AI message when button is clicked
+    generateBtn.addEventListener("click", async () => {
+      const prompt = aiPrompt.value.trim();
+      if (!prompt) {
+        alert("Please enter a short description for AI to work with.");
+        return;
+      }
+  
+      generateBtn.innerText = "⏳ Generating...";
+      generateBtn.disabled = true;
+      msg.style.display = "none";
+  
+      try {
+        const res = await fetch("/api/generate", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ prompt })
+        });
+        const data = await res.json();
+  
+        if (data.response) {
+          msgBox.value = data.response;
+          msg.textContent = "✅ Message generated! You can now send your request.";
+          msg.style.color = "green";
+          msg.style.display = "block";
+        } else {
+          msg.textContent = "❌ AI couldn't generate the message. Try again.";
+          msg.style.color = "red";
+          msg.style.display = "block";
+        }
+      } catch (err) {
+        msg.textContent = "❌ Something went wrong. Please try again.";
+        msg.style.color = "red";
+        msg.style.display = "block";
+      }
+  
+      generateBtn.innerText = "🪄 Generate Request";
+      generateBtn.disabled = false;
+    });
+  
+    // Just handle form submission as normal now
+    form.addEventListener("submit", function () {
+      msg.textContent = "📨 Sending your request...";
+      msg.style.color = "#2563EB";
+      msg.style.display = "block";
+    });
+  </script>
+  
 </body>
 </html>
