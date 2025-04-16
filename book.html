@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a Session | Ali Jabbary</title>
+  <!-- Link to your main stylesheet if needed -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* Booking Page Specific Styles */
+    :root {
+      --primary: #2563EB;
+      --radius: 0.9rem;
+      --transition: 0.25s ease;
+      --light: #F8FAFC;
+      --dark: #0F172A;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .booking-container {
+      max-width: 600px;
+      width: 100%;
+      background: #fff;
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .booking-container h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+      font-size: 2rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input, select, textarea {
+      padding: 0.8rem 1rem;
+      border: 1px solid #cbd5e1;
+      border-radius: var(--radius);
+      font-size: 1rem;
+      width: 100%;
+    }
+    button.btn {
+      background: var(--primary);
+      color: #fff;
+      padding: 0.75rem 1.75rem;
+      border: none;
+      border-radius: var(--radius);
+      font-weight: 700;
+      transition: transform var(--transition), box-shadow var(--transition);
+      cursor: pointer;
+    }
+    button.btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px rgba(37, 99, 235, 0.25);
+    }
+  </style>
+</head>
+<body>
+  <div class="booking-container">
+    <h1>Book a Session</h1>
+    <form action="https://formspree.io/f/yourbookingformid" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
+      <input type="email" name="_replyto" placeholder="Your Email" required aria-label="Your Email">
+      <input type="tel" name="phone" placeholder="Your Phone Number" required aria-label="Your Phone Number">
+      
+      <!-- Subject Dropdown for Topic-specific Booking -->
+      <select name="subject" required aria-label="Select a Subject">
+        <option value="" disabled selected>Select a Subject</option>
+        <option value="Machine Learning & AI">Machine Learning & AI</option>
+        <option value="Python & Data Science">Python & Data Science</option>
+        <option value="Mechanical Engineering">Mechanical Engineering</option>
+        <option value="Excel & Data Analysis">Excel & Data Analysis</option>
+        <option value="Crypto & Trading Basics">Crypto & Trading Basics</option>
+        <option value="Accounting Principles">Accounting Principles</option>
+        <option value="Corporate Finance">Corporate Finance</option>
+        <option value="Large Language Models">Large Language Models</option>
+        <option value="SolidWorks CAD">SolidWorks CAD</option>
+        <option value="ANSYS FEA/CFD">ANSYS FEA/CFD</option>
+        <option value="AutoCAD Drafting">AutoCAD Drafting</option>
+        <option value="Sage Accounting">Sage Accounting</option>
+        <option value="Mathematics (All Levels)">Mathematics (All Levels)</option>
+        <option value="Algebra">Algebra</option>
+        <option value="Physics">Physics</option>
+      </select>
+      
+      <input type="date" name="date" required aria-label="Preferred Date">
+      <input type="time" name="time" required aria-label="Preferred Time">
+      <textarea name="message" rows="5" placeholder="Tell me about your tutoring needs" required aria-label="Your Message"></textarea>
+      <button type="submit" class="btn">Send Booking Request</button>
+    </form>
+  </div>
+</body>
+</html>
