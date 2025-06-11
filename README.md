@@ -2,7 +2,7 @@
 
 Welcome to the official landing page of **Ali Jabbary**, an internationally trusted tutor and consultant delivering world-class 1-on-1 instruction in STEM, Business, Programming, and Emerging Technologies.
 
-This repository hosts a **fully responsive, SEO-optimized, modern landing page** intended for deployment on **GitHub Pages**. It is designed to convert visitors into clients through clean design, powerful content, subtle animations, and a strategic UX flow.
+This repository hosts a **fully responsive, SEO-optimized, modern landing page** intended for deployment via **Vercel**. It is designed to convert visitors into clients through clean design, powerful content, subtle animations, and a strategic UX flow.
 
 ---
 
@@ -29,7 +29,7 @@ This repository hosts a **fully responsive, SEO-optimized, modern landing page**
 - **Font Awesome 6** – For icons
 - **Google Fonts (Inter)** – Typography
 - **Unsplash Images** – Free stock images
-- **Hosted on GitHub Pages** – No build tools needed
+- **Deploy on Vercel** – `vercel --prod` deploys static files and functions with no build command
 
 ---
 
@@ -39,8 +39,8 @@ This repository hosts a **fully responsive, SEO-optimized, modern landing page**
 2. Customize any section in `index.html` (texts, images, or styles).
 3. Replace Formspree form ID or PayPal link as needed.
 4. Commit changes.
-5. Enable GitHub Pages in your repo settings → Source: `main` → folder: `/root`.
-6. Visit your new live site at `https://yourusername.github.io/`
+5. In your Vercel dashboard, create a new project from this repo and add `GEMINI_API_KEY` under **Settings → Environment Variables**.
+6. Run `vercel --prod` to deploy your static site and serverless functions.
 
 ---
 
