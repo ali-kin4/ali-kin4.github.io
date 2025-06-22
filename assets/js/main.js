@@ -75,6 +75,19 @@ function startAutoScroll() {
 }
 startAutoScroll();
 
+// ==============================
+// Simple Search Filtering
+// ==============================
+const searchInput = document.getElementById('search-input');
+if (searchInput) {
+  searchInput.addEventListener('input', () => {
+    const term = searchInput.value.toLowerCase();
+    document.querySelectorAll('.subject-card').forEach(card => {
+      const text = card.textContent.toLowerCase();
+      card.style.display = text.includes(term) ? '' : 'none';
+    });
+  });
+}
 
 // ==============================
 // Back-To-Top Button Functionality
