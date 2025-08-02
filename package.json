@@ -4,10 +4,12 @@
     "description": "Ali Jabbary's Site",
     "main": "index.html",
     "scripts": {
-      "start": "http-server ."
+        "start": "http-server ."
     },
     "dependencies": {
-      "http-server": "^14.1.1"
+        "bcrypt": "^6.0.0",
+        "http-server": "^14.1.1",
+        "jsonwebtoken": "^9.0.2",
+        "mongodb": "^6.18.0"
     }
-  }
-  
+}
