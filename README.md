@@ -39,8 +39,42 @@ This repository hosts a **fully responsive, SEO-optimized, modern landing page**
 2. Customize any section in `index.html` (texts, images, or styles).
 3. Replace Formspree form ID or PayPal link as needed.
 4. Commit changes.
-5. In your Vercel dashboard, create a new project from this repo and add `GEMINI_API_KEY` under **Settings → Environment Variables**.
+5. In your Vercel dashboard, create a new project from this repo and add `GEMINI_API_KEY`, `MONGODB_URI`, and `JWT_SECRET` under **Settings → Environment Variables**.
 6. Run `vercel --prod` to deploy your static site and serverless functions.
+
+### 🔐 Auth API
+
+Once deployed, two serverless endpoints are available for basic authentication.
+
+#### `POST /api/auth/register`
+
+**Payload**
+
+```json
+{ "email": "user@example.com", "password": "securePassword" }
+```
+
+**Responses**
+
+- `201` – `{ "message": "User registered" }`
+- `409` – `{ "error": "User already exists" }`
+- `400` – validation error details
+
+#### `POST /api/auth/login`
+
+**Payload**
+
+```json
+{ "email": "user@example.com", "password": "securePassword" }
+```
+
+**Responses**
+
+- `200` – `{ "token": "<JWT>" }`
+- `401` – `{ "error": "Invalid credentials" }`
+- `400` – validation error details
+
+Both functions require the `MONGODB_URI` and `JWT_SECRET` environment variables to be configured in Vercel.
 
 ---
 
