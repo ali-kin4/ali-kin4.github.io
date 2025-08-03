@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Ali Jabbary's Site",
     "main": "index.html",
+    "type": "module",
     "scripts": {
         "start": "http-server ."
     },
