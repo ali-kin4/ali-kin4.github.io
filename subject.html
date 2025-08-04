@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      Dynamic subject page. This template reads a query parameter "topic"
+      from the URL and populates the page with relevant information about
+      that tutoring subject. If an unknown slug is provided, a default
+      "not found" message is shown. SEO tags are generic because
+      meta tags cannot be dynamically generated at runtime without a
+      server‑side render. The JavaScript in subjects.js updates the
+      page title on load.
+    -->
+    <title id="page-title">Subject – Ali Jabbary</title>
+    <meta
+      name="description"
+      content="Learn from Ali Jabbary with personalised tutoring across a variety of subjects including Machine Learning, Python, Engineering, Finance and more."
+    />
+    <link rel="stylesheet" href="assets/css/new-styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-container">
+        <h1 class="logo">Ali Jabbary</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html#subjects">Subjects</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="book.html" class="btn btn-small">Book a Session</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="subject-page">
+      <div class="container">
+        <h2 id="subject-title">Subject</h2>
+        <p id="subject-description"></p>
+        <ul id="subject-topics" class="subject-list"></ul>
+        <p id="subject-price" class="subject-price"></p>
+        <a href="book.html" class="btn btn-primary">Reserve a Session</a>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-info">
+          <h3>Contact</h3>
+          <p>Email: <a href="mailto:Light.knight32@gmail.com">Light.knight32@gmail.com</a></p>
+          <p>Locations: Toronto, Canada &amp; Urmia, Iran (online worldwide)</p>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html#subjects">Subjects</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="book.html">Book a Session</a></li>
+            <li><a href="login.html">Student Login</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>&copy; <span id="year"></span> Ali Jabbary. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/subjects.js"></script>
+  </body>
+</html>
