@@ -1,1 +1,50 @@
+# =====================================================
+# Node & Tailwind Build Projects
+# =====================================================
+
+# Node modules (npm packages)
 node_modules/
+
+# Tailwind output (compiled CSS if you're not CDN-based)
+dist/
+build/
+public/assets/css/styles.css
+
+# Logs and runtime
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# IDEs / Editor configs
+.vscode/
+.idea/
+*.code-workspace
+
+# Environment variables
+.env
+.env.*  # if you use .env.dev, .env.prod etc.
+
+# Cache & Temp
+.cache/
+.temp/
+*.tmp
+
+# Local config
+tailwind.config.js.backup
+postcss.config.js.backup
+
+# Optional: Avoid committing these if you're experimenting with GitHub Pages or Netlify
+*.local
+*.log
+*.bak
+
+# =====================================================
+# GitHub Pages (Optional - if you're building before deploy)
+# =====================================================
+# Uncomment if you're deploying from `/docs` or `/build`
+# docs/

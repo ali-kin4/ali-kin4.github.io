@@ -160,12 +160,21 @@
   }
 
   .logo-wrapper {
-	position: relative;
-	display: inline-block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 120px; /* Optional, protects against tiny logos */
+	max-width: 100%;  /* Prevents overflowing */
   }
   
   .logo-wrapper img {
 	display: block;
+	height: 42px;
+	max-height: 42px;
+	width: auto;
+	min-width: 120px;       /* Ensures logo doesn't shrink too much */
+	object-fit: contain;
+	flex-shrink: 0;
   }
   
   .logo-overlay {
@@ -236,16 +245,8 @@
 	 ==================================================== */
   
   /* Subject Slider */
-  .search-input {
-        display: block;
-        margin: 0 auto 2rem;
-        padding: 0.5rem 1rem;
-        border: 1px solid #ccc;
-        border-radius: var(--radius);
-        max-width: 300px;
-  }
   .subjects-slider-wrapper {
-        position: relative;
+	position: relative;
   }
   .subjects-slider {
 	display: flex;
@@ -611,9 +612,12 @@
 	  padding: 0.5rem;
 	  color: var(--primary);
 	}
+
+	
 	#menu-toggle:checked ~ ul.menu {
 	  display: flex;
 	}
+
 	@keyframes slideDown {
 	  from {
 		opacity: 0;

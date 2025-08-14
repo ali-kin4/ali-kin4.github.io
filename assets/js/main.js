@@ -75,19 +75,6 @@ function startAutoScroll() {
 }
 startAutoScroll();
 
-// ==============================
-// Simple Search Filtering
-// ==============================
-const searchInput = document.getElementById('search-input');
-if (searchInput) {
-  searchInput.addEventListener('input', () => {
-    const term = searchInput.value.toLowerCase();
-    document.querySelectorAll('.subject-card').forEach(card => {
-      const text = card.textContent.toLowerCase();
-      card.style.display = text.includes(term) ? '' : 'none';
-    });
-  });
-}
 
 // ==============================
 // Back-To-Top Button Functionality
@@ -105,28 +92,18 @@ window.addEventListener('scroll', () => {
 // ==============================
 // PayPal Button Integration
 // ==============================
-paypal.Buttons({
-  style: {
-    shape: 'pill',
-    color: 'blue',
-    layout: 'vertical',
-    label: 'paypal'
-  },
-  createOrder: function(data, actions) {
-    return actions.order.create({
+const paypalContainer = document.getElementById('paypal-button-container-ml');
+if (paypalContainer) {
+  paypal.Buttons({
+    style: { shape: 'pill', color: 'blue', layout: 'vertical', label: 'paypal' },
+    createOrder: (data, actions) => actions.order.create({
       purchase_units: [{
         description: "1-on-1 Tutoring: Machine Learning & AI",
-        amount: {
-          value: '60.00'
-        }
+        amount: { value: '60.00' }
       }]
-    });
-  },
-  onApprove: function(data, actions) {
-    return actions.order.capture().then(function(details) {
-      alert('✅ Payment completed by ' + details.payer.name.given_name + '!');
-      // Optional redirect:
-      // window.location.href = "/thank-you.html";
-    });
-  }
-}).render('#paypal-button-container-ml');
+    }),
+    onApprove: (data, actions) =>
+      actions.order.capture().then(details =>
+        alert('✅ Payment completed by ' + details.payer.name.given_name + '!'))
+  }).render('#paypal-button-container-ml');
+}
