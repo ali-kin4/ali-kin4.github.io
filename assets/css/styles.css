@@ -160,11 +160,12 @@
   }
 
   .logo-wrapper {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-width: 120px; /* Optional, protects against tiny logos */
-	max-width: 100%;  /* Prevents overflowing */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 120px; /* Optional, protects against tiny logos */
+        max-width: 100%;  /* Prevents overflowing */
+        position: relative; /* Scope overlay to logo bounds */
   }
   
   .logo-wrapper img {
