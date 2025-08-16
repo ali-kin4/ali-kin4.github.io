@@ -16,7 +16,7 @@
     <header class="header">
       <a href="../index.html" class="logo" aria-label="Home">
         <div class="logo-wrapper">
-          <img src="../assets/img/ali-jabbary-logo.png" alt="Ali Jabbary Logo" style="height:42px;" />
+          <img src="../assets/img/ali-jabbary-logo.png" alt="Ali Jabbary Logo" />
         </div>
       </a>
       <nav class="nav">
@@ -39,19 +39,41 @@
       <div>
         <a href="https://linkedin.com/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="mailto:Light.knight32@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="mailto:contact@alijabbary.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
       </div>
     </footer>
-    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="back-to-top">↑</button>
+    <button class="back-to-top">↑</button>
     <script src="../assets/js/blog-data.js"></script>
     <script>
       const container = document.getElementById('blog-list');
-      blogPosts.forEach(post => {
-        const article = document.createElement('article');
-        article.className = 'blog-card';
-        article.innerHTML = `\n          <a href="${post.filename}">\n            <img src="${post.image}" alt="${post.title}" />\n            <h2>${post.title}</h2>\n            <p>${post.excerpt}</p>\n            <span class="date">${post.date}</span>\n          </a>\n        `;
-        container.appendChild(article);
-      });
+      blogPosts
+        .slice()
+        .sort((a, b) => new Date(b.date) - new Date(a.date))
+        .forEach(post => {
+          const article = document.createElement('article');
+          article.className = 'blog-card';
+
+          const link = document.createElement('a');
+          link.href = post.filename;
+
+          const img = document.createElement('img');
+          img.src = post.image;
+          img.alt = post.title;
+
+          const h2 = document.createElement('h2');
+          h2.textContent = post.title;
+
+          const p = document.createElement('p');
+          p.textContent = post.excerpt;
+
+          const dateSpan = document.createElement('span');
+          dateSpan.className = 'date';
+          dateSpan.textContent = post.displayDate;
+
+          link.append(img, h2, p, dateSpan);
+          article.appendChild(link);
+          container.appendChild(article);
+        });
     </script>
     <script src="../assets/js/main.js"></script>
   </body>

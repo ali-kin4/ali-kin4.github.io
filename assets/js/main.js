@@ -80,13 +80,21 @@ startAutoScroll();
 // Back-To-Top Button Functionality
 // ==============================
 const backToTopBtn = document.querySelector('.back-to-top');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    backToTopBtn.classList.add('show');
-  } else {
-    backToTopBtn.classList.remove('show');
-  }
-});
+if (backToTopBtn) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add('show');
+    } else {
+      backToTopBtn.classList.remove('show');
+    }
+  });
+}
+
+document.querySelectorAll('.back-to-top').forEach(btn =>
+  btn.addEventListener('click', () =>
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  )
+);
 
 
 // ==============================
