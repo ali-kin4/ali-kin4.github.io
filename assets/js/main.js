@@ -40,40 +40,42 @@ const prevBtn = document.querySelector('.slider-btn.prev');
 const nextBtn = document.querySelector('.slider-btn.next');
 let autoScrollInterval;
 
-function scrollToNext() {
-  const cardWidth = slider.querySelector('.subject-card').offsetWidth + 32; // card width plus gap
-  if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - cardWidth) {
-    slider.scrollTo({ left: 0, behavior: 'smooth' });
-  } else {
-    slider.scrollBy({ left: cardWidth, behavior: 'smooth' });
+if (slider && prevBtn && nextBtn) {
+  function scrollToNext() {
+    const cardWidth = slider.querySelector('.subject-card').offsetWidth + 32; // card width plus gap
+    if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - cardWidth) {
+      slider.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      slider.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    }
   }
-}
 
-function scrollToPrev() {
-  const cardWidth = slider.querySelector('.subject-card').offsetWidth + 32;
-  if (slider.scrollLeft === 0) {
-    slider.scrollTo({ left: slider.scrollWidth, behavior: 'smooth' });
-  } else {
-    slider.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+  function scrollToPrev() {
+    const cardWidth = slider.querySelector('.subject-card').offsetWidth + 32;
+    if (slider.scrollLeft === 0) {
+      slider.scrollTo({ left: slider.scrollWidth, behavior: 'smooth' });
+    } else {
+      slider.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    }
   }
-}
 
-nextBtn.addEventListener('click', () => {
-  clearInterval(autoScrollInterval);
-  scrollToNext();
+  nextBtn.addEventListener('click', () => {
+    clearInterval(autoScrollInterval);
+    scrollToNext();
+    startAutoScroll();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    clearInterval(autoScrollInterval);
+    scrollToPrev();
+    startAutoScroll();
+  });
+
+  function startAutoScroll() {
+    autoScrollInterval = setInterval(scrollToNext, 4000); // Auto-scroll every 4 seconds
+  }
   startAutoScroll();
-});
-
-prevBtn.addEventListener('click', () => {
-  clearInterval(autoScrollInterval);
-  scrollToPrev();
-  startAutoScroll();
-});
-
-function startAutoScroll() {
-  autoScrollInterval = setInterval(scrollToNext, 4000); // Auto-scroll every 4 seconds
 }
-startAutoScroll();
 
 
 // ==============================

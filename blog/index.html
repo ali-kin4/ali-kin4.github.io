@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog | Ali Jabbary</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="icon" href="../assets/img/favicon-aj.png" type="image/png" />
+    <link rel="shortcut icon" href="../assets/img/favicon-aj.png" type="image/png" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="../index.html" class="logo" aria-label="Home">
+        <div class="logo-wrapper" oncontextmenu="return false;">
+          <img src="../assets/img/ali-jabbary-logo.png" alt="Ali Jabbary Logo" oncontextmenu="return false;" style="height:42px;width:auto;" />
+          <div class="logo-overlay" oncontextmenu="return false;"></div>
+        </div>
+      </a>
+      <nav class="nav">
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="menu">
+          <li><a href="../index.html#subjects">Topics</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#testimonials">Testimonials</a></li>
+          <li><a href="index.html">Blog</a></li>
+          <a href="../book.html" class="btn" style="padding:.5rem 1rem;font-size:.9rem;">Book Call</a>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="blog-list">
+      <h2 class="section-title">All Articles</h2>
+      <div id="blog-container" class="resource-grid"></div>
+    </section>
+
+    <footer>
+      <p>&copy; <span id="year"></span> Ali Jabbary. All rights reserved.</p>
+      <div>
+        <a href="https://linkedin.com/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="mailto:Light.knight32@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </footer>
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="back-to-top">↑</button>
+    <script src="../assets/js/blog-data.js"></script>
+    <script src="../assets/js/blog.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

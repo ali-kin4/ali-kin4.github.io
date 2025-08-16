@@ -71,7 +71,7 @@
              <li><a href="#subjects">Topics</a></li>
              <li><a href="#about">About</a></li>
              <li><a href="#testimonials">Testimonials</a></li>
-             <li><a href="#resources">Resources</a></li>
+             <li><a href="blog/">Blog</a></li>
              <a href="book.html" class="btn" style="padding:.5rem 1rem;font-size:.9rem;">Book Call</a>
 
            </ul>
@@ -440,54 +440,11 @@
          </div>
       </section>
       <!-- Resources -->
-      <section id="resources">
-         <h2 class="section-title">Free Resources</h2>
-         <div class="resource-grid">
-            <a
-               class="resource-card"
-               href="https://github.com/yourrepo"
-               target="_blank"
-               rel="noopener"
-               >
-               <img
-                  src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=600&q=80"
-                  alt="GitHub code repo"
-                  />
-               <div>
-                  <h4>Python Data Science Boilerplate</h4>
-                  <p>Ready‑to‑use notebooks & utils for any data project.</p>
-               </div>
-            </a>
-            <a
-               class="resource-card"
-               href="https://yourblog.com/llm-cheatsheet"
-               target="_blank"
-               rel="noopener"
-               >
-               <img
-                  src="assets/img/llm_cheatsheet_ai_cube.png"
-                  alt="LLM cheat sheet"
-                  />
-               <div>
-                  <h4>LLM Prompt Engineering Cheat Sheet</h4>
-                  <p>Key patterns & examples to boost generative AI output.</p>
-               </div>
-            </a>
-            <a
-               class="resource-card"
-               href="https://yourblog.com/finance-formulas"
-               target="_blank"
-               rel="noopener"
-               >
-               <img
-                  src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80"
-                  alt="Finance formulas"
-                  />
-               <div>
-                  <h4>Essential Finance Formulas PDF</h4>
-                  <p>One‑page summary for valuation, NPV, IRR & more.</p>
-               </div>
-            </a>
+      <section id="latest">
+         <h2 class="section-title">Latest From the Blog</h2>
+         <div id="latest-posts" class="resource-grid"></div>
+         <div style="text-align:center;margin-top:2rem;">
+            <a href="blog/" class="btn">Read More Articles</a>
          </div>
       </section>
       <!-- Testimonials -->
@@ -605,6 +562,8 @@
       </footer>
       <!-- At the end of body -->
       <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="back-to-top">↑</button>
+      <script src="assets/js/blog-data.js"></script>
+      <script src="assets/js/blog.js"></script>
       <script src="assets/js/main.js"></script>
    </body>
 </html>
