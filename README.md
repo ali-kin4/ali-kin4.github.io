@@ -97,7 +97,7 @@ Ali works with students across **Canada**, **USA**, **UK**, **Australia**, **New
 ---
 
 ## 📩 Contact
-For business inquiries, visit the contact form on the live site or email directly at: [Light.knight32@gmail.com](mailto:Light.knight32@gmail.com)
+For business inquiries, visit the contact form on the live site or email directly at: [info@alijabbary.com](mailto:info@alijabbary.com)
 
 ---
 
